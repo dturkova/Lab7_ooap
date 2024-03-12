@@ -96,13 +96,13 @@ class Program
         layoutEditor.SetNextEditor(designEditor);
 
         // Створення завдань для редакції
-        Task task1 = new Task("Внести правки в статтю", TaskType.Edit);
+        Task task1 = new Task("Внести правки", TaskType.Edit);
         Task task2 = new Task("Створити макет нової сторінки журнала", TaskType.Layout);
-        Task task3 = new Task("Розробити дизайн обкладинки для журнала", TaskType.Design);
+        Task task3 = new Task("Розробити дизайн", TaskType.Design);
 
         // Обробка завдань
         editingEditor.HandleTask(task1);
-        layoutEditor.HandleTask(task2);
-        designEditor.HandleTask(task3);
+        editingEditor.HandleTask(task2);
+        editingEditor.HandleTask(task3);
     }
 }
